@@ -1,0 +1,382 @@
+*{
+    padding: 0;
+    MARGIN:0;
+    font-family: Arial;
+    border: border-box;
+    font-family: sans-serif
+}
+
+.header{
+   
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 20px 0%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 40px;
+    color:#f75d09;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 10%;
+}
+.navbar a{
+    font-size:18px;
+    color: rgb(11, 11, 11);
+    text-decoration:none;
+    font-weight: bold;
+    margin-left: 35px;
+    margin-right: 15px;
+    transition:   width 0.3s ease-out color 1.5s ease;
+}
+.navbar a:hover{
+    color:#f75d09;
+    width:200px;
+    transition: width 0.5s ease;
+    border-bottom: 2px solid #f75d09; /* Increase border width on hover */
+    border-width: 2px;
+    cursor: pointer;
+}
+.cv-button{
+    HEIGHT:40px;
+    WIDTH:175px;
+    border:none;
+    border-radius: 10px;
+    transition: box-shadow 0.4s ease-in background-color 1s,color 0.15s;
+    background: #f75d09 ;
+    margin-top: 20px;
+    font-size:20px;
+    color: white;
+    box-shadow: 0 0 0 2px #f75d09;
+    align-items: start;
+}
+
+.cv-button:hover{
+    background-color:hsl(0, 0%, 100%);
+     
+    color:#f75d09;
+    box-shadow: 0 0 0 2px  #f75d09;
+    transition: background-color 0.1s ease;
+
+}
+.home{
+    height:100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-img img{
+width: 100%;
+padding-left: 10%;
+border-radius: 60%;
+padding-top: 10%;
+margin-right: 10%;
+
+}
+/* Media query for screens with a width of 768px or less */
+@media only screen and (max-width: 768px) {
+    .home {
+       flex-direction:column; /* make the text and image stack on top of each other on smaller screens */
+     }
+    .home-content {
+       margin-right: 0;
+       /* remove the margin between the text and image on smaller screens */
+     }
+     .home-content h1,h3,p{
+        text-align: center;
+        padding-left: 21px;
+        
+     }
+     
+    }
+    .home-img{
+        align-items: center;
+        padding-right: 20px;
+    }
+    
+   
+     .About h1{
+        text-align: center;
+        padding-left: 21px;
+
+     }
+     .About p{
+        font-size: 15px;
+        padding: 10px;
+     }
+   
+.home-content{
+    max-width: 600px;
+    flex-basis: 60%; /* take up 60% of the width */
+    margin-right: 20px;
+}
+.home-content h1{
+    font-size: 40px;
+    font-weight: 700;
+}
+.home-content h3{
+    font-size: 30px;
+    font-weight: 700;
+    color:#f75d09;
+    
+}
+.home-content p{
+    font-size: 18px;
+    padding-top: 5px;
+    font-weight: bold;
+}
+.home-content h2{
+    padding-top: 5px;
+    font-weight: 700;
+    color:#f75d09;
+}
+.home-icon{
+    justify-content: space-evenly;
+    display: flex;
+    padding-inline-end: 70%;
+    margin-right: 40px;
+    margin-top: 10px;
+}
+.home-icon a{
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center; 
+    padding-inline: 5%;
+   
+    font-size: 40px;
+    color: #f75d09;
+    
+}
+.home-icon a:hover{
+ box-shadow: black;
+}
+
+
+.About{
+    justify-content: center;
+    align-items: center;
+  
+   padding-top: 5%;
+    flex-wrap: wrap;
+    text-align: center;
+    transition: color 0.5 ease;
+}
+.About h1{
+    font-size: 40px;
+    width: 100%;
+  
+    transition: color 0.5s ease-in-out;
+}
+
+@media only screen and (max-width: 768px) {
+    .About {
+       flex-direction:column;
+       padding-left: 10%;
+       padding-right: 10%; /* make the text and image stack on top of each other on smaller screens */
+     }
+    .home-icon{
+        align-items: center;
+        justify-content: center;
+        margin-left: 20%;
+        padding-inline-end: 30%;
+        padding-inline-start: 25%;
+    }
+    .cv-button{
+        align-items: center;
+        justify-content: center;
+        margin-left: 35%;
+        font-size: 20px;
+        height: 70px;
+        width:200px;
+       
+    }
+    .home-img{
+        padding-right: 10%;
+    }
+   }
+
+   
+.About h1:hover{
+    color: #f75d09;
+  
+}   
+.About-content{
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.5;
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.Skills{
+    padding-top:5%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center; 
+}
+.Skills h1{
+    font-size: 40px;
+    width: 100%;
+    transition: color 0.5s ease-in-out;
+}
+.Skills h1:hover{
+    color: #f75d09;
+}
+.Skill-icon{
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .Skills {
+       flex-direction:column; /* make the text and image stack on top of each other on smaller screens */
+     }
+    
+   }
+.Skill-icon {
+    width: 50%; /* make each image take up 50% of the width */
+    margin: 20px; /* add some margin around each image */
+    display: flex; /* make the images display as a flex container */
+    justify-content: space-evenly; /* center the images horizontally */
+    align-items: center; /* center the images vertically */
+}
+  
+.Skill-icon img {
+    width: 30%; /* make the image take up 30% of the width of its parent */
+    height: auto; /* make the image height adjust automatically */
+    border-radius: 10px; /* add a border radius to the image */
+    margin-left: 20px; /* add some margin between the images */
+   
+}
+  
+  /* Media query for screens with a width of 768px or less */
+  @media only screen and (max-width: 768px) {
+.Skill-icon {
+      width: 100%; /* make each image take up the full width on smaller screens */
+      margin: 10px; /* reduce the margin on smaller screens */
+      flex-direction:inherit;
+    }
+}
+.Project {
+    padding-top:5%;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    
+  }
+.Project h1{
+    font-size: 40px;
+    width: 100%;
+    transition: color 0.5s ease-in-out;
+    ;
+}  
+  .Project-box {
+    display: inline-block;
+    height: 450px;
+    width:30%;
+    background-color: rgb(242, 244, 246);
+    padding: 5px;
+    padding-left: 10px;
+    padding-bottom: 2PX;
+    padding-inline-start: 2px;
+    margin: 10px;
+    margin-top: 9.5px;
+    margin-right: 10px;
+    border-radius: 20px;
+    transition: box-shadow 0.5s ease-in-out;
+  }
+  .Project-box:hover{
+    color: rgb(233, 112, 20);
+    opacity: 0.9;
+    transition: opacity 0.15s;
+    box-shadow : 5px 0px 10px rgb(221, 94, 10);
+    cursor: pointer;
+}
+  .Project-box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+   
+  }
+  
+  .Project-box p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+  }
+  .box-image{
+    HEIGHT: 350px;
+    background-size:cover;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: opacity 0.5s ease-in-out;
+   border-radius: 20px;
+   background-position: center;
+    
+}
+.box-image:hover{
+    opacity: 0.8;
+    transition: opacity 0.5s;
+    transform: scale(0.9);
+}
+.Button-container {
+    display: flex; /* make the buttons display as a flex container */
+    justify-content: center;
+    flex-direction: row; /* stack the buttons horizontally */
+    width: 100%; /* make the buttons take up the full width of the box */
+    /* center the buttons horizontally */
+    margin-top: 10px;
+  }
+  
+.Button {
+ background-color: #f75d09;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  width:130px;
+  height: 40px;
+  color: white;
+box-shadow: 0 0 0 2px #f75d09;
+font-size: 16px;
+}
+.Button:hover{
+    background-color:hsl(0, 0%, 100%);
+  
+    color:#f75d09;
+    box-shadow: 0 0 0 2px  #f75d09;
+    transition: background-color 0.5s ease-in-out;
+}
+@media only screen and (max-width: 768px) {
+    .Button {
+        width: 90%; /* make the buttons take up the full width of the box on smaller screens */
+        margin:  5px; /* reduce the margin between the buttons on smaller screens */
+        font-size:20px;
+        height: 80%;
+      }
+    .Project-box{
+        height: 480px;
+        width: 80%; /* make the buttons take up the full width of the box on smaller screens */
+        flex-direction: row;
+    } 
+    .Skills h1{
+        padding-left: 21px;
+    }
+    .Project h1{
+        text-align: center;
+        padding-left: 21px;
+    }
+    .Button-container{
+        margin-top: 10px;
+    } 
+}
+ 
