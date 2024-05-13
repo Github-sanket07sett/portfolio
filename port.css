@@ -10,19 +10,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    width: 1200px;
 }
 
 .header{
-    
+   
     top: 0;
     left: 0;
     width:100%;
     padding: 20px 0%;
-    background: transparent;
+    background-color: rgb(44, 41, 41);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    
 }
 .logo{
     font-size: 40px;
@@ -31,14 +33,15 @@
     font-weight: bold;
     padding-left: 10%;
 }
+
 .navbar a{
     font-size:18px;
-    color: rgb(11, 11, 11);
+    color:white;
     text-decoration:none;
     font-weight: bold;
     margin-left: 35px;
     margin-right: 15px;
-    transition:   width 0.3s ease-out color 0.5s ease-in-out;
+    transition:    color 0.5s ease-in-out;
 }
 .navbar a:hover{
     color:#f75d09;
@@ -47,6 +50,7 @@
     border-bottom: 2px solid #f75d09; /* Increase border width on hover */
     border-width: 2px;
     cursor: pointer;
+   font-size: 20px;
 }
 .cv-button{
     HEIGHT:40px;
@@ -78,6 +82,7 @@
     align-items: center;
     padding: 0 10%;
     overflow: hidden;
+   
 }
 
 .home-img img{
@@ -86,11 +91,30 @@ padding-left: 10%;
 border-radius: 60%;
 padding-top: 10%;
 margin-right: 10%;
-
+background-size: cover;
+    background-position: center;
+    animation: image-float 2s ease-in-out forwards infinite;
+}
+@keyframes image-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 /* Media query for screens with a width of 768px or less */
 @media only screen and (max-width: 768px) and (min-width:320px) {
+
+  .logo{
+    font-size: 20px;
+ }
     .home {
+        
+        margin-top: 5%;
        flex-direction:column;
        text-align: center; /* make the text and image stack on top of each other on smaller screens */
      }
@@ -98,16 +122,20 @@ margin-right: 10%;
        margin-right: 0;
        /* remove the margin between the text and image on smaller screens */
      }
-     .home-content h1,h3,p{
+     .home-content h1{
         text-align: center;
-        padding-left: 21px;
+        padding-left: 25px; 
         
      }
-     
+     .home-content h3{
+        text-align: center;
+        padding-left: 25px;
+     } 
     }
     .home-img{
         align-items: center;
         padding-right: 20px;
+        margin-bottom: 30px;
     }
     
    
@@ -117,7 +145,7 @@ margin-right: 10%;
 
      }
      .About p{
-        font-size: 15px;
+        font-size: 20px;
         padding: 10px;
      }
    
@@ -129,18 +157,33 @@ margin-right: 10%;
 .home-content h1{
     font-size: 40px;
     font-weight: 700;
+    animation: text-animation 2s ease-in-out forwards;
+}
+@keyframes text-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 .home-content h3{
     font-size: 30px;
     font-weight: 700;
     color:#f75d09;
+
     
 }
 .home-content p{
     font-size: 18px;
     padding-top: 5px;
     font-weight: bold;
+   
+
 }
+
 .home-content h2{
     padding-top: 5px;
     font-weight: 700;
@@ -163,9 +206,7 @@ margin-right: 10%;
     color: #f75d09;
     
 }
-.home-icon a:hover{
- box-shadow: black;
-}
+
 
 
 .About{
@@ -192,8 +233,8 @@ margin-right: 10%;
         padding-right: 15%;
     }
     .home-icon {
-      padding-right: 26%;
-     margin: 0 auto;
+    padding-right: 26%;
+    font-size: larger;
      right:30%;
         
       }
@@ -210,10 +251,9 @@ margin-right: 10%;
     .home-icon  {
           margin:0 auto;
           display: inline-flex;
-          margin-top: 5%;
         padding-inline-start: 20%;
+        margin-top: 2%;
          column-gap: 2px;
-
       }
     .cv-button {
           margin-left: 18%;
@@ -236,7 +276,12 @@ margin-right: 10%;
 .About h1:hover{
     color: #f75d09;
   
-}   
+} 
+@media only screen and (max-width :768px){
+    .About h1{
+        text-align: center;
+    }
+} 
 .About-content{
     font-size: 20px;
     text-align: center;
@@ -261,7 +306,7 @@ margin-right: 10%;
     color: #f75d09;
 }
 .Skill-icon{
-    font-size: 20px;
+    font-size: 50%x;
     transition: color 0.5s ease;
 }
 .Skill-icon:hover{
@@ -286,7 +331,7 @@ margin-right: 10%;
     width: 30%; /* make the image take up 30% of the width of its parent */
     height: auto; /* make the image height adjust automatically */
     border-radius: 10px; /* add a border radius to the image */
-    margin-left: 20px; /* add some margin between the images */
+    margin-left: 15px; /* add some margin between the images */
    
 }
   
@@ -309,8 +354,11 @@ margin-right: 10%;
     font-size: 40px;
     width: 100%;
     transition: color 0.5s ease-in-out;
-    ;
+    padding-bottom: 10px;
 }  
+.Project h1:hover{
+color: #f75d09;
+}
   .Project-box {
     display: inline-block;
     height: 450px;
